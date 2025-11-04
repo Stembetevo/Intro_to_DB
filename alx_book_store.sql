@@ -44,7 +44,7 @@ CREATE TABLE Order_Details (
   orderdetailid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   order_id INT NOT NULL,
   book_id INT NOT NULL,
-  quantity INT NOT NULL,
+  quantity DOUBLE,
   INDEX idx_od_order_id (order_id),
   INDEX idx_od_book_id (book_id),
   CONSTRAINT fk_od_order FOREIGN KEY (order_id) REFERENCES Orders(order_id)
