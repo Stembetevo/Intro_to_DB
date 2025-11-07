@@ -9,6 +9,7 @@ Example usage:
 */
 
 -- Show all tables in the currently selected database
+USE alx_book_store;
 SHOW TABLES;
 
 -- One-line SELECT that lists table names from INFORMATION_SCHEMA for the current database
