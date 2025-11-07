@@ -22,17 +22,15 @@ CREATE TABLE `Authors` (
 	PRIMARY KEY (`author_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE `books` (
-	`book_id` INT NOT NULL AUTO_INCREMENT,
-	`title` VARCHAR(130) NOT NULL,
-	`author_id` INT NOT NULL,
-	`price` DOUBLE NOT NULL,
-	`publication_date` DATE,
-	PRIMARY KEY (`book_id`),
-	KEY `idx_books_author_id` (`author_id`),
-	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-		CONSTRAINT `fk_books_author` FOREIGN KEY (`author_id`) REFERENCES `Authors`(`author_id`) ON DELETE RESTRICT ON UPDATE CASCADE
-	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `Books` (
+    `book_id` INT NOT NULL AUTO_INCREMENT,
+    `title` VARCHAR(130) NOT NULL,
+    `author_id` INT NOT NULL,
+    `price` DOUBLE NOT NULL,
+    `publication_date` DATE,
+    PRIMARY KEY (`book_id`),
+    KEY `idx_books_author_id` (`author_id`),
+    CONSTRAINT `fk_books_author` FOREIGN KEY (`author_id`) REFERENCES `Authors`(`author_id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `Customers` (
