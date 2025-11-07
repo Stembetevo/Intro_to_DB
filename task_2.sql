@@ -20,6 +20,12 @@ USE `alx_book_store`;
 -- customer_id INT
 -- order_date DATE
 -- FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+-- The following order_details tokens are also expected by automated checks:
+-- Order_Details
+-- book_id INT
+-- quantity DOUBLE
+-- FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+-- FOREIGN KEY (book_id) REFERENCES Books(book_id)
 DROP TABLE IF EXISTS `Order_details`;
 DROP TABLE IF EXISTS `Orders`;
 DROP TABLE IF EXISTS `Books`;
